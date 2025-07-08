@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encryption/Decryption Playground</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔐 Encryption/Decryption Playground</h1>
+    <p class="subtitle">Try out Caesar and Vigenère ciphers in real-time.</p>
+  </header>
+  <main class="card">
+    <div class="form-group">
+      <label for="cipher-type">Cipher Type</label>
+      <select id="cipher-type">
+        <option value="caesar">Caesar Cipher</option>
+        <option value="vigenere">Vigenère Cipher</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="key">Key (shift for Caesar, keyword for Vigenère)</label>
+      <input type="text" id="key" placeholder="e.g., 3 or SECRET" />
+    </div>
+    <div class="form-group">
+      <label for="input-text">Input Text</label>
+      <textarea id="input-text" rows="4" placeholder="Type your message here..."></textarea>
+    </div>
+    <div class="actions">
+      <button id="encrypt-btn" disabled>Encrypt</button>
+      <button id="decrypt-btn" disabled>Decrypt</button>
+      <button id="clear-btn" class="secondary">Clear</button>
+    </div>
+    <div class="result-container">
+      <label for="output-text">Result</label>
+      <div class="result" id="output-text">Your result will appear here.</div>
+      <button id="copy-btn" class="secondary" disabled>Copy to Clipboard</button>
+      <div id="toast" class="toast hidden">Copied!</div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Encryption Playground</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
